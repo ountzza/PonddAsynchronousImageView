@@ -1,0 +1,4 @@
+iOS UIImage subclass that is Asynchously download image from URL and save it on the local App using the given filename
+The next time the image is called, it will look for the image name again can show the local image file instead
+
+Meant to be easy to use, any suggestion is welcome :)
