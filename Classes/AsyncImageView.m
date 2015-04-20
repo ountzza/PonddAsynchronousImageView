@@ -139,39 +139,5 @@ int countTotalBook2;
 	[data release];
     data = nil;
 }
-/*
--(BOOL)checkSavedFile:(NSString *)fileName withData:(NSData *)dataFile
-{
-	
-	BOOL fileExist =NO;
-	// Look in Documents for an existing plist file
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(
-														 NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *documentsDirectory = [paths objectAtIndex:0];
-	NSString *myFilePathx = [documentsDirectory stringByAppendingPathComponent: 
-							[NSString stringWithFormat: @"%@.png", fileName] ];
-	[myFilePathx retain];
-	
-	// If it's not there, write it
-	NSFileManager *fileManger = [NSFileManager defaultManager];
-	if ( ![fileManger fileExistsAtPath:myFilePathx] ) {
-		//NSLog(@"write file on XXX %@",myFilePath);
-		//[dataFile writeToFile:myFilePath atomically:YES];
-		[self saveFile:myFilePathx withData:dataFile];
-	}else {
-		fileExist = YES;
-		//NSLog(@"file is there xxx %@",myFilePath);
-	}
-		
-	//keep saving the same file
-	return fileExist; 
-}
--(void)saveFile:(NSString*)filePathNamex withData:(NSData *)dataFile
-{
-	NSFileManager *fileManger = [NSFileManager defaultManager];
-	[fileManger createFileAtPath:filePathNamex contents:dataFile attributes:nil];
 
-	NSLog(@"Save datafilexxx %@",filePathNamex);
-}
- */
 @end
