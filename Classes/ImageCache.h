@@ -10,11 +10,7 @@
 
 @class ImageCacheObject;
 
-@interface ImageCache : NSObject {
-    NSUInteger totalSize;  // total number of bytes
-    NSUInteger maxSize;    // maximum capacity
-    NSMutableDictionary *myDictionary;
-}
+@interface ImageCache : NSObject
 
 @property (nonatomic, readonly) NSUInteger totalSize;
 
@@ -22,4 +18,5 @@
 -(void)insertImage:(UIImage*)image withSize:(NSUInteger)sz forKey:(NSString*)key;
 -(UIImage*)imageForKey:(NSString*)key;
 -(void)saveFile:(NSString*)filePathName withData:(NSData *)dataFile;
+
 @end

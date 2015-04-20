@@ -8,30 +8,31 @@
 
 #import "ImageCacheObject.h"
 
+@interface ImageCacheObject ()
+
+@property (nonatomic) NSUInteger size;    // size in bytes of image data
+@property (nonatomic, strong) NSDate *timeStamp;  // time of last access
+@property (nonatomic, strong) UIImage *image;     // cached image
+
+
+@end
+
+
 @implementation ImageCacheObject
 
-@synthesize size;
-@synthesize timeStamp;
-@synthesize image;
 
--(id)initWithSize:(NSUInteger)sz Image:(UIImage*)anImage{
+-(id)initWithSize:(NSUInteger)size Image:(UIImage*)anImage{
     if (self = [super init]) {
-        size = sz;
-        timeStamp = [[NSDate date] retain];
-        image = [anImage retain];
+        _size = size;
+        _timeStamp = [NSDate date];
+        _image = anImage;
     }
     return self;
 }
 
 -(void)resetTimeStamp {
-    [timeStamp release];
-    timeStamp = [[NSDate date] retain];
+    _timeStamp = [NSDate date];
 }
 
--(void) dealloc {
-    [timeStamp release];
-    [image release];
-    [super dealloc];
-}
 
 @end

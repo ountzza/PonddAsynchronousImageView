@@ -9,23 +9,26 @@
 #import "ImageCache.h"
 #import "ImageCacheObject.h"
 
-@implementation ImageCache
+@interface ImageCache ()
 
-@synthesize totalSize;
+@property (nonatomic) NSUInteger totalSize;  // total number of bytes
+@property (nonatomic) NSUInteger maxSize;    // maximum capacity
+@property (nonatomic, strong) NSMutableDictionary *myDictionary;
+
+@end
+
+
+@implementation ImageCache
 
 -(id)initWithMaxSize:(NSUInteger) max  {
     if (self = [super init]) {
-        totalSize = 0;
-        maxSize = max;
-        myDictionary = [[NSMutableDictionary alloc] init];
+        _totalSize = 0;
+        _maxSize = max;
+        _myDictionary = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
 
--(void)dealloc {
-    [myDictionary release];
-    [super dealloc];
-}
 
 -(void)insertImage:(UIImage*)image withSize:(NSUInteger)sz forKey:(NSString*)key{
 	NSData *dataObj = UIImageJPEGRepresentation(image, 1.0);
@@ -35,7 +38,7 @@
 }
 
 -(UIImage*)imageForKey:(NSString*)key {
-    ImageCacheObject *object = [myDictionary objectForKey:key];
+    ImageCacheObject *object = [_myDictionary objectForKey:key];
     if (object == nil)
         return nil;
     [object resetTimeStamp];
