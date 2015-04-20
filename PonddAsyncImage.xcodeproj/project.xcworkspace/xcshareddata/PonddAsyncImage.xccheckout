@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7730D4A5-3FDE-44F5-819D-87CEE615B9ED</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PonddAsyncImage</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EC1D3D28FD4658277C3590F693A824E25653A4A4</key>
+		<string>https://github.com/NarasimhaRaja/PonddAsynchronousImageView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PonddAsyncImage.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EC1D3D28FD4658277C3590F693A824E25653A4A4</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/NarasimhaRaja/PonddAsynchronousImageView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EC1D3D28FD4658277C3590F693A824E25653A4A4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EC1D3D28FD4658277C3590F693A824E25653A4A4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PonddAsynchronousImageView</string>
+		</dict>
+	</array>
+</dict>
+</plist>

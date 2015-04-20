@@ -10,19 +10,10 @@
 #import <UIKit/UIKit.h>
 
 
-@interface AsyncImageView : UIView {
-    NSURLConnection *connection;
-    NSMutableData *data;
-    NSString *urlString; // key for image cache dictionary
-	//UIImage *imagePondd;
-	
-	NSString *realTimeLoad;
-}
-@property(nonatomic,retain)NSMutableData *data;
-@property(nonatomic,retain)NSString *realTimeLoad;
-//@property(nonatomic,retain)UIImage *imagePondd;
+@interface AsyncImageView : UIView 
+
+@property (nonatomic, strong) NSString *realTimeLoad;
+
 -(void)loadImageFromURL:(NSURL*)url withFileName:(NSString*)imageName;
-//-(BOOL)checkSavedFile:(NSString *)fileName withData:(NSData *)dataFile;
-//-(void)saveFile:(NSString*)filePathNamex withData:(NSData *)dataFile;
-//+(void)setStingToLoad:(NSString*)string;
+
 @end

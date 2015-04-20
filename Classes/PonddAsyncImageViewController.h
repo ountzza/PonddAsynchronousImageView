@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "AsyncImageView.h"
-@interface PonddAsyncImageViewController : UIViewController {
 
-}
+@interface PonddAsyncImageViewController : UIViewController
 
 @end
 
